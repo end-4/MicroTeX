@@ -1,10 +1,10 @@
 #include "config.h"
 
-#if defined(BUILD_GTK) && !defined(MEM_CHECK)
-
-#include "platform/cairo/graphic_cairo.h"
-
+// Fix borrowed from @NonaSuomy: https://github.com/end-4/dots-hyprland/issues/3422#issuecomment-4613101735
 #include <fontconfig/fontconfig.h>
+#include <fontconfig/fcfreetype.h>
+#if defined(BUILD_GTK) && !defined(MEM_CHECK)
+#include "platform/cairo/graphic_cairo.h"
 
 #include <utility>
 
